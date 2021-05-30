@@ -7,6 +7,4 @@ const getEl = [...categories]
     category => `Категория: ${category.firstElementChild.textContent}
   Количество элементов: ${category.lastElementChild.children.length}`
 )
-
-.join ("\n")
 console.log (getEl)
