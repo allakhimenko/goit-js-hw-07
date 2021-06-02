@@ -4,7 +4,10 @@ const refs = {
 }
 
 function onInputChange() {
-    refs.userName.textContent = refs.input.value;
+    if (refs.input.value === '') {
+        refs.userName.innerHTML = 'незнакомец';
+    }
+    else refs.userName.textContent = refs.input.value;
 }
 
 refs.input.addEventListener('input', onInputChange);
