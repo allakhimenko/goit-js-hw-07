@@ -1,8 +1,20 @@
 const counterValue = document.querySelector('#value');
-const increment = document.querySelector('#increment');
-const decrement = document.querySelector('#decrement');
+const increments = document.querySelector('#increment');
+const decrements = document.querySelector('#decrement');
 
-counterValue.addEventListener('click', increment);
-counterValue.addEventListener('click', decrement)
+let value = 0;
 
+function increment() {
+    value +=1;
 
+counterValue.textContent = value;
+}
+
+function decrement() {
+    value -=1;
+
+counterValue.textContent = value;
+}
+
+increments.addEventListener('click', increment);
+decrements.addEventListener('click', decrement);
